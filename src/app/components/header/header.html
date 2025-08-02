@@ -1,36 +1,66 @@
-<header class="flex bg-linear-to-r/srgb from-baleal-blue to-baleal-blue-light w-screen py-7 px-55 pl-100 fixed">
-    <div class="w-full flex justify-between items-center">
-        <img class="w-37 shrink-0" src="baleal.svg" alt="Baleal logo">
-        <ul class="flex text-white gap-x-[35px]">
-            <li class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg">
-                <span class="relative z-10">INÍCIO</span>
-                <span class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"></span>
-            </li>
+<div class="flex items-center p-8 bg-gradient-to-r from-baleal-blue-dark to-baleal-blue-light">
+  <img class="w-37" src="baleal.svg" alt="Baleal logo" />
+  <ul class="flex text-white w-full items-center justify-end gap-x-[35px]">
 
-            <li class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg">
-                <span class="relative z-10">SERVIÇOS</span>
-                <span class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"></span>
-            </li>
+    <li *ngFor="let item of menuItems" class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg">
+        <a [routerLink]="item.link">
+            <span class="relative z-10">{{item.label}}</span>
+            <span class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"></span>
+        </a>
+    </li>
 
-            <li class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg">
-                <span class="relative z-10">MOTIVOS</span>
-                <span class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"></span>
-            </li>
 
-            <li class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg">
-                <span class="relative z-10">SOBRE</span>
-                <span class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"></span>
-            </li>
 
-            <li class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg">
-                <span class="relative z-10">FAQ</span>
-                <span class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"></span>
-            </li>
+    <!-- <li
+      class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg"
+    >
+      <span class="relative z-10">INÍCIO</span>
+      <span
+        class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"
+      ></span>
+    </li>
 
-            <div class="hover:bg-violet-500 p-1 rounded-md">
-                <button>Contato</button>
-                <img src="" alt="">
-            </div>
-        </ul>
+    <li
+      class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg"
+    >
+      <span class="relative z-10">SERVIÇOS</span>
+      <span
+        class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"
+      ></span>
+    </li>
+
+    <li
+      class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg"
+    >
+      <span class="relative z-10">MOTIVOS</span>
+      <span
+        class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"
+      ></span>
+    </li>
+
+    <li
+      class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg"
+    >
+      <span class="relative z-10">SOBRE</span>
+      <span
+        class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"
+      ></span>
+    </li>
+
+    <li
+      class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg"
+    >
+      <span class="relative z-10">FAQ</span>
+      <span
+        class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"
+      ></span>
+    </li> -->
+
+    <div
+      class="py-[7px] px-7 bg-green-300 border-2 border-lime-green-500 rounded-xl flex items-center"
+    >
+      <button class="text-xl font-bold mr-3">Contato</button>
+      <fa-icon class="text-2xl font-bold" [icon]="faWhatsapp"></fa-icon>
     </div>
-</header>
+  </ul>
+</div>

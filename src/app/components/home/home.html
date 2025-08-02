@@ -1,17 +1,28 @@
-<main class="w-screen h-screen flex flex-col">
-    <app-header></app-header>
-    <section class="flex flex-col items-start py-50 px-100 gap-15">
-        <div class="bg-blue-50 w-160 ">
-            <h3 class="text-5xl pb-6">O próximo passo para crescer sua marca começa com <b>uma conversa.</b></h3>
-            <p class="text-[18px]">Agende sua reunião gratuita com um especialista da Baleal e descubra exatamente o que fazer para ter mais resultados no digital, de forma prática e imediata.</p>
+<main class="w-screen h-screen flex flex-col bg-baleal-blue-dark">
 
-            <div class="my-8 p-3 bg-white rounded-md w-70 flex">
+    <app-header></app-header>
+
+    <section class="flex flex-col py-50 px-100 gap-15 h-screen">
+        <div class="w-160 ">
+            <h3 class="text-5xl pb-6 text-white">O próximo passo para crescer sua marca começa com <b>uma conversa.</b></h3>
+            <p class="text-[18px] text-white">Agende sua reunião gratuita com um especialista da Baleal e descubra exatamente o que fazer para ter mais resultados no digital, de forma prática e imediata.</p>
+
+            <div class="my-8 bg-white rounded-md w-70 flex">
                 <fa-icon [icon]="faPlay"></fa-icon>
                 <button class="pl-4">Online e Gratuito | Google Meet</button>
             </div>
             <app-agenda-btn></app-agenda-btn>
         </div>
     </section>
-    <div class="w-screen h-5 bg-gradient-to-r from-baleal-red-bright to-baleal-red-dark to-100% to-transparent"></div>
+
+    <div class="w-screen h-5 bg-gradient-to-r absolute inset-x-0 bottom-15 from-baleal-red-bright to-transparent"></div>
+
+    <section class=" ">
+        <div class="bg-baleal-blue-dark flex flex-col pl-70 text-white">
+            <h3 class="text-4xl font-bold">Conheça as nossas soluções</h3>
+            <p>É hora do seu negócio usar o poder da internet ao seu favor.</p>
+            <p>Seja nosso parceiro e vamos fazer isso acontecer!</p>
+        </div>
+    </section>
 
 </main>
