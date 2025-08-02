@@ -1,28 +1,44 @@
 <main class="w-screen h-screen flex flex-col bg-baleal-blue-dark">
+  <app-header></app-header>
 
-    <app-header></app-header>
+  <section class="block flex-col pt-45 pb-45 px-100 gap-15 h-screen w-full">
+    <div class="w-140">
+      <h3 class="text-4xl pb-6 text-white font-normal">
+        O próximo passo para crescer sua marca começa com <b>uma conversa.</b>
+      </h3>
+      <p class="text-[18px]/5 font-light text-white">
+        Agende sua reunião gratuita com um especialista da Baleal e descubra
+        exatamente o que fazer para ter mais resultados no digital, de forma
+        prática e imediata.
+      </p>
 
-    <section class="flex flex-col py-50 px-100 gap-15 h-screen">
-        <div class="w-160 ">
-            <h3 class="text-5xl pb-6 text-white">O próximo passo para crescer sua marca começa com <b>uma conversa.</b></h3>
-            <p class="text-[18px] text-white">Agende sua reunião gratuita com um especialista da Baleal e descubra exatamente o que fazer para ter mais resultados no digital, de forma prática e imediata.</p>
+      <div class="my-8 p-3 bg-white rounded-md w-70 flex cursor-pointer">
+        <a href="#">
+          <fa-icon [icon]="faPlay"></fa-icon>
+          <button class="pl-4">Online e Gratuito | Google Meet</button>
+        </a>
+      </div>
+      <app-agenda-btn></app-agenda-btn>
+    </div>
+  </section>
 
-            <div class="my-8 bg-white rounded-md w-70 flex">
-                <fa-icon [icon]="faPlay"></fa-icon>
-                <button class="pl-4">Online e Gratuito | Google Meet</button>
-            </div>
-            <app-agenda-btn></app-agenda-btn>
-        </div>
-    </section>
+  <div
+    class="w-full min-h-[20px] flex bg-gradient-to-r from-baleal-red-bright to-transparent"
+  ></div>
 
-    <div class="w-screen h-5 bg-gradient-to-r absolute inset-x-0 bottom-15 from-baleal-red-bright to-transparent"></div>
+  <section class="bg-baleal-blue-dark flex flex-col pl-100 py-15">
+    <div class="text-white">
+      <h3 class="text-4xl font-bold pb-5">Conheça as nossas soluções</h3>
+      <p class="">É hora do seu negócio usar o poder da internet ao seu favor.</p>
+      <p>Seja nosso parceiro e vamos fazer isso acontecer!</p>
+    </div>
 
-    <section class=" ">
-        <div class="bg-baleal-blue-dark flex flex-col pl-70 text-white">
-            <h3 class="text-4xl font-bold">Conheça as nossas soluções</h3>
-            <p>É hora do seu negócio usar o poder da internet ao seu favor.</p>
-            <p>Seja nosso parceiro e vamos fazer isso acontecer!</p>
-        </div>
-    </section>
-
+    <div class="z-10 grid grid-cols-4 grid-cols-[repeat(4,255px)]  gap-5 py-11">
+        <div *ngFor="let item of menuGrid" class="flex flex-col items-center py-5 px-5 bg-white gap-4 rounded-4xl shadow-lg">
+            <span class="text-center w-[210px] text-lg font-bold font-['Sora']">{{item.label}}</span>
+            <span class="text-center font-['Poppins']">{{item.text}}</span>
+        </div>        
+        <div class="w-full h-[500px] absolute bottom-0 "></div>
+    </div>
+  </section>
 </main>

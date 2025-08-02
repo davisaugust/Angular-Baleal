@@ -1,15 +1,19 @@
-<div class="flex items-center p-8 bg-gradient-to-r from-baleal-blue-dark to-baleal-blue-light">
-  <img class="w-37" src="baleal.svg" alt="Baleal logo" />
-  <ul class="flex text-white w-full items-center justify-end gap-x-[35px]">
-
-    <li *ngFor="let item of menuItems" class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg">
-        <a [routerLink]="item.link">
-            <span class="relative z-10">{{item.label}}</span>
-            <span class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"></span>
-        </a>
+<div
+  class="flex items-center p-6 bg-gradient-to-r from-baleal-blue-dark to-baleal-blue-light fixed w-full"
+>
+  <img class="w-37 ml-95" src="baleal.svg" alt="Baleal logo" />
+  <ul class="flex text-white w-full items-center justify-end gap-x-[35px] pr-20">
+    <li
+      *ngFor="let item of menuItems"
+      class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg"
+    >
+      <a [routerLink]="item.link">
+        <span class="relative z-10">{{item.label}}</span>
+        <span
+          class="absolute left-0 top-0 h-full w-0 bg-violet-500 transition-all duration-500 ease-out group-hover:w-full"
+        ></span>
+      </a>
     </li>
-
-
 
     <!-- <li
       class="relative overflow-hidden px-2 py-1 rounded-md group cursor-pointer text-lg"
@@ -57,7 +61,7 @@
     </li> -->
 
     <div
-      class="py-[7px] px-7 bg-green-300 border-2 border-lime-green-500 rounded-xl flex items-center"
+      class="py-[7px] px-7 bg-green-300 border-1 border-lime-green-500 rounded-xl flex items-center"
     >
       <button class="text-xl font-bold mr-3">Contato</button>
       <fa-icon class="text-2xl font-bold" [icon]="faWhatsapp"></fa-icon>
